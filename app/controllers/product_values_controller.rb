@@ -60,7 +60,12 @@ class ProductValuesController < ApplicationController
   # DELETE /product_values/1
   # DELETE /product_values/1.json
   def destroy
-    @product_value.destroy
+    
+    #@product_value.destroy
+
+    @product_value.fl_status = "I"
+    @product_value.save 
+    
     respond_to do |format|
       format.html { redirect_to product_values_url, notice: 'Product value was successfully destroyed.' }
       format.json { head :no_content }
