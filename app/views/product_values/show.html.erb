@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Qt stock:</strong>
+  <%= @product_value.qt_stock %>
+</p>
+
+<p>
+  <strong>Vl purchase uni:</strong>
+  <%= @product_value.vl_purchase_uni %>
+</p>
+
+<p>
+  <strong>Vl sale uni:</strong>
+  <%= @product_value.vl_sale_uni %>
+</p>
+
+<p>
+  <strong>Fl status:</strong>
+  <%= @product_value.fl_status %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @product_value.product %>
+</p>
+
+<%= link_to 'Edit', edit_product_value_path(@product_value) %> |
+<%= link_to 'Back', product_values_path %>

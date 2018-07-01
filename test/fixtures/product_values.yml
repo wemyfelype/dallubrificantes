@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qt_stock: 1
+  vl_purchase_uni: 1
+  vl_sale_uni: 1
+  fl_status: MyString
+  product_id: 
+
+two:
+  qt_stock: 1
+  vl_purchase_uni: 1
+  vl_sale_uni: 1
+  fl_status: MyString
+  product_id: 

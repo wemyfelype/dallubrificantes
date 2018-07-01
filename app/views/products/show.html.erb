@@ -1,0 +1,28 @@
+<h1>Produto</h1>
+
+<form>
+  <div class="form-row">    
+      <div class="form-group col-md-3">
+        <%= content_tag :label, content_tag(:strong, "Categoria")%>
+        <%= collection_select :product, :category_id, @categories, :id, :description,{prompt: "Selecione", :selected => @product.category_id }, {class: "form-control",disabled: true} %>
+      </div>
+      <div class="form-group col-md-9">
+        <%= content_tag :label, content_tag(:strong, "Nome")%>
+        <%= text_field_tag :name, @product.name, class: "form-control", disabled: true %>
+      </div>
+  </div>
+  <div class="form-group">
+    <%= content_tag :label, content_tag(:strong, "Código de barras")%>
+    <%= text_field_tag :bar_code, @product.bar_code, class: "form-control", disabled: true %>
+  </div>
+  <div class="form-group">
+    <%= content_tag :label, content_tag(:strong, "Descrição")%>
+    <%= text_area_tag :description, @product.description, class: "form-control", disabled: true %>
+  </div>
+  <div class="btn-group float-right">
+    <%= link_to 'Voltar', products_path, class: "btn btn-primary" %>
+    <%= link_to 'Editar', edit_product_path(@product), class: "btn btn-primary" %>
+  </div>
+</form>
+
+
