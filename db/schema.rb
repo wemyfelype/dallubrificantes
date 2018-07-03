@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20180617201704) do
   end
 
   create_table "product_values", force: :cascade do |t|
-    t.integer  "qt_stock"
     t.integer  "vl_purchase_uni"
     t.integer  "vl_sale_uni"
     t.string   "fl_status"
@@ -33,6 +32,7 @@ ActiveRecord::Schema.define(version: 20180617201704) do
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
+    t.integer  "qt_stock"
     t.string   "bar_code"
     t.text     "description"
     t.integer  "category_id"
