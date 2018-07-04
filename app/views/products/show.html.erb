@@ -3,20 +3,44 @@
 <form>
   <div class="form-row">    
       <div class="form-group col-md-3">
-        <%= content_tag :label, content_tag(:strong, "Categoria")%>
+        <%= content_tag :label, "Categoria" %>
         <%= collection_select :product, :category_id, @categories, :id, :description,{prompt: "Selecione", :selected => @product.category_id }, {class: "form-control",disabled: true} %>
       </div>
       <div class="form-group col-md-9">
-        <%= content_tag :label, content_tag(:strong, "Nome")%>
+        <%= content_tag :label, "Nome" %>
         <%= text_field_tag :name, @product.name, class: "form-control", disabled: true %>
       </div>
   </div>
-  <div class="form-group">
-    <%= content_tag :label, content_tag(:strong, "Código de barras")%>
-    <%= text_field_tag :bar_code, @product.bar_code, class: "form-control", disabled: true %>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <%= content_tag :label, "Código de barras" %>
+      <%= text_field_tag :bar_code, @product.bar_code, class: "form-control", disabled: true %>
+    </div>
+    <div class="form-group col-md-2">
+      <%= content_tag :label, "Qt em estoque" %>
+      <%= text_field_tag :qt_stock, @product.qt_stock, class: "form-control", disabled: true %>
+    </div>
+    
+    <% @product.product_values.each do |val| %>
+      <% if val.fl_status == "A" %>
+      
+        <div class="form-group col-md-2">
+          <%= content_tag :label, "Valor compra" %>
+          <%= text_field_tag :vl_purchase_uni, val.vl_purchase_uni, class: "form-control", disabled: true %>
+        </div>
+        
+        <div class="form-group col-md-2">
+          <%= content_tag :label, "Valor venda" %>
+          <%= text_field_tag "", val.vl_sale_uni, class: "form-control", disabled: true %>
+        </div>
+            
+      <% end %>
+    <% end %>
+    
+    
   </div>
   <div class="form-group">
-    <%= content_tag :label, content_tag(:strong, "Descrição")%>
+    <%= content_tag :label, "Descrição" %>
     <%= text_area_tag :description, @product.description, class: "form-control", disabled: true %>
   </div>
   <div class="btn-group float-right">
