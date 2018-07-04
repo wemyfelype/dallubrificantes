@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
   belongs_to :category
-  #has_many :objects, class_name: "object", foreign_key: "reference_id"
+  #has_one :category
+  has_many :product_values
 
-  
+  accepts_nested_attributes_for :product_values
 end

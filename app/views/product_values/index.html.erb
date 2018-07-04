@@ -14,7 +14,6 @@
       <thead>
         <tr>
           <th>Produto</th>
-          <th>Qt. em estoque</th>
           <th>Vl. uni. compra</th>
           <th>Vl uni venda</th>
           <th>Status</th>
@@ -26,7 +25,6 @@
         <% @product_values.each do |product_value| %>
           <tr>
             <td><%= product_value.product.name %></td>
-            <td><%= product_value.qt_stock %></td>
             <td><%= product_value.vl_purchase_uni %></td>
             <td><%= product_value.vl_sale_uni %></td>
             <td><%= product_value.fl_status == "A" ? "Ativo" : "Inativo" %></td>

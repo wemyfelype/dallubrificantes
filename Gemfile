@@ -54,5 +54,8 @@ group :development do
   gem 'active_record_query_trace'
   gem 'better_errors'
   gem 'pry-byebug'
+  
+  gem 'pry-rails'  
+  
 end
 

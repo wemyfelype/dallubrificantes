@@ -14,17 +14,13 @@ class ProductValuesController < ApplicationController
 
   # GET /product_values/new
   def new
-    
-    @products = Product.joins(:product_values)
-    
-    binding.pry
-    
-    @products_ = Product.all
+    @products = Product.all
     @product_value = ProductValue.new
   end
 
   # GET /product_values/1/edit
   def edit
+    @products = Product.all
   end
 
   # POST /product_values
