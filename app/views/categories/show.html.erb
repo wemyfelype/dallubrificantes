@@ -1,9 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
+    <h1>Detalhes da categoria</h1>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @category.description %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<form>
+  
+  <div class="form-group">
+    <%= content_tag :label, "Descrição" %>
+    <%= text_field_tag :description, @category.description, class: "form-control", disabled: true %>
+  </div>
+  <div class="btn-group float-right">
+    <%= link_to 'Voltar', categories_path, class: "btn btn-primary" %>
+    <%= link_to 'Editar', edit_category_path(@category), class: "btn btn-primary" %>
+  </div>
+</form>

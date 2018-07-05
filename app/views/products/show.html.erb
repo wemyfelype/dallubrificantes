@@ -21,23 +21,8 @@
       <%= text_field_tag :qt_stock, @product.qt_stock, class: "form-control", disabled: true %>
     </div>
     
-    <% @product.product_values.each do |val| %>
-      <% if val.fl_status == "A" %>
+    <%= product_value_active(@product.product_values) %>
       
-        <div class="form-group col-md-2">
-          <%= content_tag :label, "Valor compra" %>
-          <%= text_field_tag :vl_purchase_uni, val.vl_purchase_uni, class: "form-control", disabled: true %>
-        </div>
-        
-        <div class="form-group col-md-2">
-          <%= content_tag :label, "Valor venda" %>
-          <%= text_field_tag "", val.vl_sale_uni, class: "form-control", disabled: true %>
-        </div>
-            
-      <% end %>
-    <% end %>
-    
-    
   </div>
   <div class="form-group">
     <%= content_tag :label, "Descrição" %>

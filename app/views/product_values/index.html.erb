@@ -1,11 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-    <% if notice != nil %>
-      <div class="alert alert-success" role="alert" id="notice">
-        <strong>Sucesso!</strong> <%= notice %>
-      </div>
-    <% end %>
-    <h1>Listando  Produtos</h1>
+    <h1>Listando valores dos produtos</h1>
   </div>
 </div>
 <div class="row">
@@ -22,6 +17,7 @@
       </thead>
 
       <tbody>
+        
         <% @product_values.each do |product_value| %>
           <tr>
             <td><%= product_value.product.name %></td>

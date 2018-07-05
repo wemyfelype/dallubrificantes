@@ -29,21 +29,7 @@
       <%= f.text_field :qt_stock, class: "form-control" %>
   </div>
   
-  <%= f.fields_for :product_values do |f_values| %>
-      <% if  f_values.object.fl_status == :A.to_s %>
-      
-        <div class="form-group col-md-2">
-            <%= f_values.label "Valor Compra" %><br>
-            <%= f_values.text_field :vl_purchase_uni, class: "form-control", disabled: true %>
-        </div>
-        <div class="form-group col-md-2">
-            <%= f_values.label "Valor Venda" %><br>
-            <%= f_values.text_field :vl_sale_uni, class: "form-control", disabled: true %>
-        </div>
-        
-      <% end %>
-  <% end %>
-
+  <%= product_value_active(@product.product_values) %>
   
 </div>
 <div class="form-group">
