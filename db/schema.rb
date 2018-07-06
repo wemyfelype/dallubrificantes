@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20180617201704) do
   end
 
   create_table "product_values", force: :cascade do |t|
-    t.integer  "vl_purchase_uni"
-    t.integer  "vl_sale_uni"
+    t.decimal  "vl_purchase_uni"
+    t.decimal  "vl_sale_uni"
     t.string   "fl_status"
     t.integer  "product_id"
     t.datetime "created_at",      null: false

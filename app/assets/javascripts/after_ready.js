@@ -1,6 +1,5 @@
-$(document).ready(() => {
+$(document).on('ready page:change', function() {
   
-
   $('[class*="auto-close"]').each(function(){
   	
   	let full_classes = $(this).attr("class")

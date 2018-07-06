@@ -12,15 +12,18 @@
   <% end %>
   <div class="field">
     <%= f.label :vl_purchase_uni %><br>
-    <%= f.number_field :vl_purchase_uni %>
+    <!-- , value: number_to_currency_br(@product_value.vl_purchase_uni) -->
+    <%= f.text_field :vl_purchase_uni, value: number_to_currency_br(@product_value.vl_purchase_uni), class: "form-control text-right" ,"data-mask-reverse": true , "data-mask": "#,##0.00" %>
   </div>
   <div class="field">
     <%= f.label :vl_sale_uni %><br>
-    <%= f.number_field :vl_sale_uni %>
+    <!-- , value: number_to_currency_br(@product_value.vl_sale_uni) -->
+    <%= f.text_field :vl_sale_uni, value: number_to_currency_br(@product_value.vl_sale_uni), class: "form-control text-right" ,"data-mask-reverse": true , "data-mask": "#,##0.00" %>
   </div>
   <div class="field">
     <%= f.label :fl_status %><br>
     <%= f.text_field :fl_status %>
+    <%= check_box("eula", "accepted", { :class => 'toggle eula_check', "data-toggle" => "toggle"  }, "yes", "no") %>
   </div>
   <div class="field">
     <%= f.label :product_id %><br>

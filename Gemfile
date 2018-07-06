@@ -30,6 +30,7 @@ gem 'bootstrap-glyphicons'
 gem 'seed_dump'
 gem 'colorize'
 gem 'jquery_mask_rails', '~> 0.1.0'
+gem 'mdbootstrap-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

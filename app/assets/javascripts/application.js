@@ -16,6 +16,7 @@
 //= require popper
 //= require bootstrap
 //= require jquery.mask
+//= require mdb
 
 //= require_tree .
 

@@ -1,7 +1,8 @@
 module ApplicationHelper
     
     def number_to_currency_br(number, symbol = "")
-      number_to_currency(number, :unit => symbol+" ", :separator => ",", :delimiter => ".")
+        symbol = symbol.blank? ? symbol : symbol.concat(" ")
+        number_to_currency(number, :unit => symbol , :separator => ",", :delimiter => ".")
     end
     
     def product_value_active(product_values)
@@ -20,7 +21,7 @@ module ApplicationHelper
                 content_tag(:div, class: "input-group-prepend") do
                     content_tag :span, "R$", class: "input-group-text"
                 end +
-                text_field_tag(:vl_purchase_uni, number_to_currency_br(!active_pv.nil? ? active_pv.vl_purchase_uni : 0),class: "form-control text-right", disabled: true, "data-mask-reverse": true , "data-mask": "000.000.000,00", )
+                text_field_tag(:vl_purchase_uni, number_to_currency_br(!active_pv.nil? ? active_pv.vl_purchase_uni : 0),class: "form-control text-right", disabled: true, "data-mask-reverse": true , "data-mask": "#.##0,00" )
             end
         end
         
@@ -30,10 +31,10 @@ module ApplicationHelper
                 content_tag(:div, class: "input-group-prepend") do
                     content_tag :span, "R$", class: "input-group-text"
                 end +
-                text_field_tag(:vl_sale_uni, number_to_currency_br(!active_pv.nil? ? active_pv.vl_sale_uni : 0), class: "form-control text-right", disabled: true, "data-mask-reverse": true , "data-mask": "000.000.000,00", )
+                text_field_tag(:vl_sale_uni, number_to_currency_br(!active_pv.nil? ? active_pv.vl_sale_uni : 0), class: "form-control text-right", disabled: true, "data-mask-reverse": true , "data-mask": "#.##0,00" )
             end
         end
-
+        
         div_vl_purchase.concat(div_vl_sale)
         
     end

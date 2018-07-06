@@ -21,8 +21,8 @@
         <% @product_values.each do |product_value| %>
           <tr>
             <td><%= product_value.product.name %></td>
-            <td><%= product_value.vl_purchase_uni %></td>
-            <td><%= product_value.vl_sale_uni %></td>
+            <td><%= number_to_currency_br(product_value.vl_purchase_uni) %></td>
+            <td><%= number_to_currency_br(product_value.vl_sale_uni) %></td>
             <td><%= product_value.fl_status == "A" ? "Ativo" : "Inativo" %></td>
             <td>
               <%= link_to content_tag(:span, "", class: 'glyphicon glyphicon-trash'), product_value, method: :delete, data: { confirm: "Deseja realmente apagar?" }, class: 'btn btn-default float-right' %>

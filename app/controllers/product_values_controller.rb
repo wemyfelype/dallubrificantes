@@ -26,6 +26,7 @@ class ProductValuesController < ApplicationController
   # POST /product_values
   # POST /product_values.json
   def create
+    
     @product_value = ProductValue.new(product_value_params)
 
     respond_to do |format|
@@ -42,6 +43,7 @@ class ProductValuesController < ApplicationController
   # PATCH/PUT /product_values/1
   # PATCH/PUT /product_values/1.json
   def update
+    
     respond_to do |format|
       if @product_value.update(product_value_params)
         format.html { redirect_to @product_value, notice: 'Product value was successfully updated.' }
