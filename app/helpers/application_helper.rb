@@ -20,7 +20,7 @@ module ApplicationHelper
                 content_tag(:div, class: "input-group-prepend") do
                     content_tag :span, "R$", class: "input-group-text"
                 end +
-                text_field_tag(:vl_purchase_uni, number_to_currency_br(!active_pv.nil? ? active_pv.vl_purchase_uni : 0), class: "form-control text-right", disabled: true )
+                text_field_tag(:vl_purchase_uni, number_to_currency_br(!active_pv.nil? ? active_pv.vl_purchase_uni : 0),class: "form-control text-right", disabled: true, "data-mask-reverse": true , "data-mask": "000.000.000,00", )
             end
         end
         
@@ -30,7 +30,7 @@ module ApplicationHelper
                 content_tag(:div, class: "input-group-prepend") do
                     content_tag :span, "R$", class: "input-group-text"
                 end +
-                text_field_tag(:vl_sale_uni, number_to_currency_br(!active_pv.nil? ? active_pv.vl_sale_uni : 0), class: "form-control text-right", disabled: true )
+                text_field_tag(:vl_sale_uni, number_to_currency_br(!active_pv.nil? ? active_pv.vl_sale_uni : 0), class: "form-control text-right", disabled: true, "data-mask-reverse": true , "data-mask": "000.000.000,00", )
             end
         end
 

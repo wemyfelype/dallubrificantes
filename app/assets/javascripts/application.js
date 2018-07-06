@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require popper
 //= require bootstrap
+//= require jquery.mask
 
 //= require_tree .
 
+$.jMaskGlobals.watchDataMask = true;
