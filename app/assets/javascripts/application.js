@@ -10,14 +10,19 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require popper
-//= require bootstrap
-//= require jquery.mask
-//= require mdb
 
-//= require_tree .
+// = require turbolinks
 
-$.jMaskGlobals.watchDataMask = true;
+// = require jquery3
+// = require jquery_ujs
+// = require jquery.mask
+
+// = require tether
+// = require popper
+
+// = require bootstrap.min
+// = require mdb.min
+
+// = require_tree .
+
+/*$.jMaskGlobals.watchDataMask = true;*/
