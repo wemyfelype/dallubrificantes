@@ -28,16 +28,15 @@ gem 'google-webfonts-rails', '~> 0.0.4'
 
 
 
-# others
+# OTHERS
+
+# materialize-sass is a Sass powered version of Materialize, a modern responsive front-end framework based on Material 
+gem 'materialize-sass'
+# This gem helps you to add this fantastic icon collection to your Rails projects easily. I keep the gem updated so you always will have the latest icons in your project.
+gem 'material_icons'
+
 gem 'jquery_mask_rails', '~> 0.1.0'
 
-gem 'sprockets-rails', :require => 'sprockets/railtie'
-gem 'tether-rails', '~> 1.4'
-
-gem 'bootstrap', '~> 4.1.1'
-gem 'bootstrap-glyphicons'
-
-gem 'mdbootstrap-rails'
 
 gem 'seed_dump'
 gem 'colorize'

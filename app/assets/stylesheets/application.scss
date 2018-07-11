@@ -11,17 +11,15 @@
  * file per style scope.
  *
  */
- 
-@import "tether";
-@import "bootstrap.min";
-@import "mdb.min";
-@import 'bootstrap/glyphicons';
 
-.form-group{
-  label{
-      font-weight: bold;
-  }   
-}
+// Color
+@import "materialize/components/color";
+// Variables;
+@import "materialize/components/variables";
+
+@import "materialize";
+
+@import "material_icons";
 
 
 /*

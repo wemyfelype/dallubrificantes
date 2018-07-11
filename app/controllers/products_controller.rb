@@ -46,6 +46,7 @@ class ProductsController < ApplicationController
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Produto editado.' }
+        format.js   { Materialize.toast("msg", 1500) }
         format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }

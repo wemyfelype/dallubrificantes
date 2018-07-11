@@ -11,18 +11,18 @@
 // about supported directives.
 //
 
-// = require turbolinks
 
-// = require jquery3
+// = require jquery
 // = require jquery_ujs
+
+// = require turbolinks
 // = require jquery.mask
-
-// = require tether
-// = require popper
-
-// = require bootstrap.min
-// = require mdb.min
-
+// = require materialize-sprockets
 // = require_tree .
 
 /*$.jMaskGlobals.watchDataMask = true;*/
+
+$(document).on('ready page:change', function() {
+  
+
+});
